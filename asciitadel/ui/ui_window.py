@@ -4,6 +4,7 @@ class UIWindow(object):
     def __init__(self, name, data, monitored, dim_y, dim_x, pos_y, pos_x):
         self.name = name
         self.data = data
+        
         if dim_y < 0:
             self.dim_y = curses.LINES + dim_y - pos_y
         else:

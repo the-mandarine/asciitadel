@@ -19,7 +19,7 @@ class Game(object):
 
     def run(self):
         sleep(1)
-        self.data.set("c.life", 15)
+        self.data.set("c.life", 100)
         while not self.terminated:
             self.data.add("c.life", -1)
             sleep(0.5)
