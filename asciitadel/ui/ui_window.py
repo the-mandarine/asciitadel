@@ -34,7 +34,6 @@ class UIWindow(object):
     def draw(self):
         self.__static_draw__()
         self.static_draw()
-        #self.populate()
         self.refresh()
 
     def __static_draw__(self):
