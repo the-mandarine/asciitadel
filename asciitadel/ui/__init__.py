@@ -64,11 +64,11 @@ class Interface(Thread):
         sleep(1)
         while not self.terminated:
             try:
-                # TODO clean
-                for c in self.components:
-                    c.populate()
-                    c.refresh()
-                sleep(0.2)
+                for component in self.components:
+                    if component.has_changed():
+                        component.populate()
+                        component.refresh()
+                sleep(0.1)
             except:
                 self.stop()
                 traceback.print_exc()

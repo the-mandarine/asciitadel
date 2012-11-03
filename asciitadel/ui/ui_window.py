@@ -36,6 +36,9 @@ class UIWindow(object):
         self.static_draw()
         self.refresh()
 
+    def has_changed(self):
+        return self.data.bundle_has_changed(self.name)
+
     def __static_draw__(self):
         self.box()
 
